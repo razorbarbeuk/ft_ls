@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:59:26 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 17:59:27 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/02 18:16:38 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,16 +90,17 @@ typedef struct			s_ls
 void					ft_parse_option(t_ls *ls, char **av);
 void					ft_check_file(t_ls *ls, int i, char **av, int ac);
 void					ft_open_lst(t_ls *ls, t_data *list_folder);
-void					ft_open_dir(t_ls *ls, t_data *list_folder, t_data *start);
+void					ft_open_dir(t_ls *ls, t_data *list_folder, \
+	t_data *start);
 t_data					*ft_opt_a(t_ls *ls, t_data *list_folder);
-void					ft_create_lst_file(t_ls *ls,t_data *file);
+void					ft_create_lst_file(t_ls *ls, t_data *file);
 void					ft_create_lst(t_ls *ls, t_data *data_c);
 void					ft_lst_new(t_data **alst, t_data *new, t_ls *ls);
 void					*ft_name_join(char *name, char *path);
 t_data					*ft_stat(t_ls *ls, char *name, char *path);
-void    				ft_mount_lstat(t_data *data_c, struct stat *infos);
+void					ft_mount_lstat(t_data *data_c, struct stat *infos);
 char					ft_opt(t_ls *ls, char *str);
-void 					ft_opt_error(char *str, int i);
+void					ft_opt_error(char *str, int i);
 void					ft_init_option(t_ls *ls);
 char					ft_type(mode_t mode, char str);
 void					ft_protect(mode_t mode, char *str);
@@ -108,7 +109,7 @@ t_data					*ft_print_lst(t_ls *ls, t_data *data_c, int *t);
 void					ft_show_detail(t_ls *ls, char *path);
 void					ft_print_model(t_ls *ls, t_data *data_c, int *t);
 void					ft_print_time(t_data *data_c, int *t);
-void 					ft_sym_link(t_ls *ls, t_data *data_c);
+void					ft_sym_link(t_ls *ls, t_data *data_c);
 void					ft_print_elem(char *print, char *c, int j, int t);
 void					ft_hour_split(char **str, char **hour);
 int						*ft_space_count(t_data *data_c);
