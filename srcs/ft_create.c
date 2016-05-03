@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:59:03 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 17:59:04 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/03 13:27:09 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,16 @@ void	ft_create_lst(t_ls *ls, t_data *data_c)
 
 t_data	*ft_opt_a(t_ls *ls, t_data *list_folder)
 {
-	if (ls->is_first && !ls->options.opt_r)
+	if (ls->is_first_a && !ls->options.opt_r)
 	{
 		while (list_folder && list_folder->data->name[0] != '.')
 			list_folder = list_folder->next;
 		while (list_folder && list_folder->data->name[0] == '.')
 			list_folder = list_folder->next;
 	}
-	else if (ls->is_first && ls->options.opt_r)
+	else if (ls->is_first_a && ls->options.opt_r)
 	{
 		while (list_folder && list_folder->data->name[0] == '.')
-			list_folder = list_folder->next;
-		while (list_folder && list_folder->data->name[0] != '.')
 			list_folder = list_folder->next;
 	}
 	return (list_folder);

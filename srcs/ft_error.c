@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:58:26 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 17:58:27 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/02 18:31:19 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,6 @@ void	ft_show_help(void)
 	ft_putendl("-l  -- long listing");
 	ft_putendl("-r  -- reverse sort order");
 	ft_putendl("-t  -- sort by modification time");
-	ft_putendl("-c  -- add colors to output");
-	ft_putendl("-i  -- show inode number");
-	ft_putendl("-n  -- show uid and gid");
 	ft_putendl("-h  -- print information about command");
 	exit(0);
 }

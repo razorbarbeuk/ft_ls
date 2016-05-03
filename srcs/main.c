@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:58:34 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 17:58:36 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/03 13:16:45 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_open_lst(t_ls *ls, t_data *list_folder)
 	data_c = NULL;
 	ls->total_blocks = 0;
 	start = data_c;
-	if (ls->options.opt_a)
+	if (ls->is_first && ls->options.opt_a)
 		list_folder = ft_opt_a(ls, list_folder);
 	while (list_folder)
 	{
@@ -81,6 +81,7 @@ int		main(int ac, char **av)
 
 	ls.rec = ac;
 	ls.is_first = 0;
+	ls.is_first_a = 0;
 	ft_init_option(&ls);
 	ft_parse_option(&ls, av);
 	if (ls.options.opt_h)

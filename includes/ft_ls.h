@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:59:26 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 18:16:38 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/03 12:52:43 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ typedef struct			s_ls
 	int					rec;
 	int					count_file;
 	int					is_first;
+	int					is_first_a;
 	int					total_blocks;
 	ssize_t				len;
 }						t_ls;

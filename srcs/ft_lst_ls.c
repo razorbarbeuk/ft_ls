@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:58:40 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 17:58:42 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/03 13:01:14 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,10 @@ t_data	*ft_stat(t_ls *ls, char *name, char *path)
 	data_c = NULL;
 	path = (!ls->is_first) ? name : ft_name_join(name, path);
 	if (lstat(path, &infos) == -1)
+	{
 		ft_error(name);
+		return (NULL);
+	}
 	data_c = (t_data *)malloc(sizeof(t_data));
 	data_c->data = (t_fich *)malloc(sizeof(t_fich));
 	if (data_c->data)

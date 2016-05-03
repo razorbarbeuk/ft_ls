@@ -6,7 +6,7 @@
 /*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/02 17:59:11 by gbourson          #+#    #+#             */
-/*   Updated: 2016/05/02 18:00:38 by gbourson         ###   ########.fr       */
+/*   Updated: 2016/05/03 13:23:29 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,11 @@ void	ft_open_dir(t_ls *ls, t_data *list_folder, t_data *start)
 	DIR				*entry;
 	struct dirent	*dir;
 
-	start = NULL;
-	free(start);
-	ls->count_file = 0;
 	if (list_folder->data->type == 'd')
 	{
 		ft_show_detail(ls, list_folder->data->path);
 		ls->is_first = 1;
+		ls->is_first_a = 1;
 		if ((entry = opendir(list_folder->data->path)))
 		{
 			while ((dir = readdir(entry)))
